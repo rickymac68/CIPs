@@ -141,8 +141,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
 
 **Recommendation:**
 
-### #12: Vote buying - Ada kickbacks.  
-**Problem: Buying and Selling of Votes** 
+### #12: Vote buying - Ada kickbacks.  **Problem: Buying and Selling of Votes** 
  * With regard to [CIP-1694](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md), Treasury withdrawals come to mind but there could be a market for votes on most any governance action. It seems that in a close election where there is a lot of ADA waiting on the outcome, a market for votes is created where votes become much more valuable as we approach the [end of an epoch](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md#lifecycle) when votes are tallied. Payment for votes could be in ADA or another currency. So there may be a perverse incentive for voters to wait till the last minutes of an epoch before casting votes in order to get the best price for their votes. Aside from corrupting the election, it could also overload the system as votes come in at the last moments before an epoch closes. 
   * Delegation is linked to wallets in an obvious way so payment for votes could be most easily made in ADA.  
   * In this market for votes:  
@@ -172,10 +171,10 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
         * In human democracy the DReps only their earn delegation once and then exploit their power for personal gain during the rest of their careers  
         * Bee democracy is structured like so because those structured differently were all selected out of existence  
         * We should model our democracy after the one which nature has perfected over the course of millions of years  
-    * **Building Cardano democracy on the bee democracy model** 
-      * Each DRep must solicit for voter delegation on each and every proposal using an online document which explains their position and which also locks their vote. 
+    * **Abstracting bee democracy functions and applying these to Cardano governance** 
+      * Each DRep must solicit for delegation on each and every proposal using an online document (a solicitation) which explains their position and which also locks their vote. 
       * The DRep's vote is cast and embedded in the solicitation with their digital signature. 
-      * The DRep's vote can not be changed once the solicitation has been published so voters know what they are getting
+      * The DRep's vote can not be changed once the solicitation has been published so delegators know what they are getting
       * Delegators delegate to the DRep's solicitation rather than to the DRep directly  
       * Delegators may change their delegation at any time before the final tally
       * Delegators may not vote directly, rather Delegators may register as a DRep and then delegate to their own solicitation if they wish and then vote on that. 
@@ -195,7 +194,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
             * This makes it impossible to calculate the vote tally until the election is over
             * This will help prevent a voting market from emerging during an election by making it difficult to determine the value of a vote  
             * This may necessitate voting on a sidechain which has the required properties 
-          * Block the ability of anyone except the voter from seeing which solicitation an individual vote was delegated to   
+          * Block the ability of anyone except the delegator from seeing which solicitation an individual delegated to   
             * This will help prevent a voting market from emerging during an election by making it difficult to determine the value of a vote
             * Prevents a voting market from forming because it would not be easy for DReps to know where to send ADA in exchange for delegation  
             * Allows proof that an election is not rigged  
