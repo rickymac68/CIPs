@@ -142,7 +142,8 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
 **Recommendation:**
 
 ### #12: Vote buying - Ada kickbacks.  
-  * With regard to CIP-1694, Treasury withdrawals come to mind but there could be a market for votes on most any governance action. It seems that in a close election where there is a lot of ADA waiting on the outcome, a market for votes is created where votes become much more valuable as we approach the [end of an epoch](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md#lifecycle) when votes are tallied. Payment for votes could be in ADA or another currency. So there may be a perverse incentive for voters to wait till the last minutes of an epoch before casting votes in order to get the best price for their votes. Aside from corrupting the election, it could also overload the system as votes come in at the last moments before an epoch closes. 
+**Problem: Buying and Selling of Votes** 
+ * With regard to [CIP-1694](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md), Treasury withdrawals come to mind but there could be a market for votes on most any governance action. It seems that in a close election where there is a lot of ADA waiting on the outcome, a market for votes is created where votes become much more valuable as we approach the [end of an epoch](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md#lifecycle) when votes are tallied. Payment for votes could be in ADA or another currency. So there may be a perverse incentive for voters to wait till the last minutes of an epoch before casting votes in order to get the best price for their votes. Aside from corrupting the election, it could also overload the system as votes come in at the last moments before an epoch closes. 
   * Delegation is linked to wallets in an obvious way so payment for votes could be most easily made in ADA.  
   * In this market for votes:  
     * Where it is known exactly how many votes you still need in order to get the ADA for your project out of the treasury,  
@@ -153,10 +154,10 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
     * Likely this fraud could be automated via smart contract in a trustless manner such that the price for a vote is displayed and so that the dishonest voters would not need to trust the dishonest DRep for payment.  
     * This attack could also be carried out on a vote for parameter change or on any other governance action.  
 
-**Recommendation:**  
+**Modeling Cardano Governance On Bee Democracy**  
   * The notion that we are locked into any given voting system because of current blockchain structure is an illusion  
     * Our community can build anything it wants if we believe we can  
-    * Let's build a blockchain to fit our voting needs not an inadequate voting system to fit our blockchain   
+    * Let's build a blockchain to fit our voting needs not a voting system to fit our blockchain   
   * Bee Democracy
     * Over millions of years, through the process of evolution, nature has already worked out the form of democracy which produces the most truth and best results for its citizens  
     * [This video explains Bee Democracy](https://youtu.be/NDnQ4pAjBUg?t=310)  
@@ -171,19 +172,23 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
         * In human democracy the DReps only their earn delegation once and then exploit their power for personal gain during the rest of their careers  
         * Bee democracy is structured like so because those structured differently were all selected out of existence  
         * We should model our democracy after the one which nature has perfected over the course of millions of years  
-    * Building Cardano democracy on the bee democracy model 
-      * Each DRep must solicit for votes on each proposal (dance) to explain how they are voting on the proposal and why  
-      * The DRep's vote is cast and embedded in the solicitation. 
+    * **Building Cardano democracy on the bee democracy model** 
+      * Each DRep must solicit for voter delegation on each and every proposal using an online document which explains their position and which also locks their vote. 
+      * The DRep's vote is cast and embedded in the solicitation with their digital signature. 
       * The DRep's vote can not be changed once the solicitation has been published so voters know what they are getting
-      * Voters delegate to the DRep's solicitation rather than to the DRep directly  
-      * Voters may change their delegation at any time before the final tally
-      * Voters may not vote directly, rather voters may register as a DRep and then delegate to their own solicitation if they wish. 
+      * Delegators delegate to the DRep's solicitation rather than to the DRep directly  
+      * Delegators may change their delegation at any time before the final tally
+      * Delegators may not vote directly, rather Delegators may register as a DRep and then delegate to their own solicitation if they wish and then vote on that. 
       * This structure ensures that:  
-        * Voters have lots of good information to make their decisions  
-        * Voters are deliberately casting their vote for a given proposal  
-        * Uninformed voters don't vote  
+        * Delegators have lots of good information to make their decisions  
+        * Delegators are deliberately casting their Delegation for a given proposal  
+        * Uninformed Delegators don't Delegate  
+        * Uninformed DReps don't vote
+        * Delegators know in advance, before delegation, how DReps voted and why
+        * DReps must explain their reasoning on every proposal
         * A body of literature remains so future generations will understand how we came to our decisions and what they should consider before making changes
-      * In bee democracy there is a race to consensus which prevents a market for votes from emerging - Bees don't sell their votes 
+        * DReps can remain anonymous, building reputations only on their body of solicitations which all have the same signature.  
+      * In bee democracy there is a race to consensus which prevents a market for votes from emerging - Bees can't sell their votes 
         * A race to consensus is not possible in Cardano democracy because too many votes in a short amount of time will jam the system
         * So other methods must be employed to make votes more costly to buy then they are worth.  
           * Block the ability to read the total number of votes delegated to a DRep's solicitation while voting is in progress.  
@@ -197,7 +202,11 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
             * Protects voter from reprisal by current a regime  
             * This may necessitate voting on a sidechain which has the required properties 
       * CC, DRep, and SPO votes to remain transparent by virtue of the solicitation process which forces all to explain their votes and leave a body of information so that future generations will understand why those decisions were made
-      * Code to enforce that DReps commit their vote prior to tally with no ability to reverse position or abstain which gives voters sufficient time to verify that DReps are voting as expected 
+      * Code to enforce that DReps commit their vote in a signed solicitation for delegation prior to tally with no ability to reverse position or abstain which gives delegators sufficient time to verify that DReps are voting as expected
+      * Provide a forum (perhaps right here) for all DRep solicitations for delegation.  
+
+**Conclusion:** 
+* The process of evolution has solved many engineering problems . Perhaps we should take a look at how nature to implements democracy
 
 
 ### #13: IGCO - initial governance coin offering
