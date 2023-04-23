@@ -141,7 +141,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
 
 **Recommendation:**
 
-### #12: Vote buying - Ada kickbacks.  **Problem: Buying and Selling of Votes** 
+### #12: Vote buying - Ada kickbacks.  **Problem: Buying and Selling of Votes** **Problem: Buying and Selling of Votes** 
  * With regard to [CIP-1694](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md), Treasury withdrawals come to mind but there could be a market for votes on most any governance action. It seems that in a close election where there is a lot of ADA waiting on the outcome, a market for votes is created where votes become much more valuable as we approach the [end of an epoch](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md#lifecycle) when votes are tallied. Payment for votes could be in ADA or another currency. So there may be a perverse incentive for voters to wait till the last minutes of an epoch before casting votes in order to get the best price for their votes. Aside from corrupting the election, it could also overload the system as votes come in at the last moments before an epoch closes. 
   * Delegation is linked to wallets in an obvious way so payment for votes could be most easily made in ADA.  
   * In this market for votes:  
@@ -168,7 +168,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
         * If paying scouts for their work produced more truth than simply working for their own survival and prosperity then evolution would have selected for that  
       * BReps only receive delegation for the proposal they are currently soliciting for - Then delegation ends  
         * This is key to a functioning democracy - DReps in the bee's world have to earn their delegation for each proposal  
-        * In human democracy the DReps only their earn delegation once and then exploit their power for personal gain during the rest of their careers  
+        * In human democracy the DReps only their earn delegation once and then learn to exploit their power for personal gain during the rest of their careers  
         * Bee democracy is structured like so because those structured differently were all selected out of existence  
         * We should model our democracy after the one which nature has perfected over the course of millions of years  
     * **Abstracting bee democracy functions and applying these to Cardano governance** 
@@ -180,8 +180,8 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
       * Delegators may not vote directly, rather Delegators may register as a DRep and then delegate to their own solicitation if they wish and then vote on that. 
       * This structure ensures that:  
         * Delegators have lots of good information to make their decisions  
-        * Delegators are deliberately casting their Delegation for a given proposal  
-        * Uninformed Delegators don't Delegate  
+        * Delegators are deliberately casting their delegation for a given proposal  
+        * Uninformed delegators don't delegate  
         * Uninformed DReps don't vote
         * Delegators know in advance, before delegation, how DReps voted and why
         * DReps must explain their reasoning on every proposal
