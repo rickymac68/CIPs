@@ -209,6 +209,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
         * This is to prevent trustless renting of ADA via smart contract for use as delegation in an election
         * In other words to rent out ADA for use as delegation, the renter will be forced to give up custody
       * Provide a forum (perhaps right here) for all DRep solicitations for delegation.  
+      * For a full discussion of Bee Democracy [follow this link](https://forum.cardano.org/t/modeling-cardano-governance-on-a-version-of-democracy-which-evolved-over-millions-of-years/117109?u=johnshearing) to the Cardano forum
 
 **Conclusion:** 
 * The process of evolution has solved many engineering problems . Perhaps we should take a look at how nature to implements democracy. Bees don’t use their DReps to make decisions for the group. Bees use DReps as scouts. Bees use DReps to collect information and broadcast it to the group. Then all of them decide together.
