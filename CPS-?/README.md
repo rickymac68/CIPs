@@ -151,7 +151,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
     * and where you can broadcast an offer to purchase delegation,  
     * and where you can see exactly which wallets are delegating to you in response to your offer...  
     * Then you know exactly where to send the delegator's share of ADA after snatching it from the treasury.  
-    * Likely this fraud could be automated via smart contract in a trustless manner such that the price for  delegation is displayed so that the dishonest delegators would not need to trust the dishonest DRep for payment.  
+    * Likely this fraud could be automated via smart contract in a trustless manner such that the price for  delegation is displayed and so that the dishonest delegators would not need to trust the dishonest DRep for payment.  
     * This attack could also be carried out on a vote for parameter change or on any other governance action.  
 
 **Modeling Cardano Governance On Bee Democracy**  
@@ -187,14 +187,14 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
         * Uninformed DReps don't vote
         * Delegators know in advance, before delegation, how DReps voted and why
         * DReps must explain their reasoning on every proposal
-        * A body of literature remains so future generations will understand how we came to our decisions and what they should consider before making changes
+        * A body of literature remains (the solicitations) so future generations will understand how we came to our decisions and what they should consider before making changes
         * DReps can remain anonymous, building reputations only on their body of solicitations which all have the same signature.  
       * In bee democracy there is a race to consensus which prevents a market for delegation from emerging - Bees can't sell their delegation 
         * A race to consensus is not possible in Cardano democracy because too many votes or delegations in a short amount of time will jam the system
         * So other methods must be employed to make delegation of ADA more costly to buy then simply buying ADA at market rate.  
           * Block the ability to read the total amount of ADA delegated to a DRep's solicitation while voting is in progress.  
             * This makes it impossible to calculate the ADA tally until the election is over
-            * This will help prevent a delegation market from emerging during an election by making it difficult to determine how much ADA delegation is required pass a proposal  
+            * This will help prevent a delegation market from emerging during an election by making it difficult to determine how much ADA delegation is required to pass a proposal  
             * This may necessitate voting on a sidechain which has the required properties 
           * Block the ability of anyone except the delegator from seeing to which solicitation an individual has delegated   
             * This will help prevent a delegation market from emerging during an election by making it difficult to determine the how much ADA is needed to pass a proposal
@@ -211,8 +211,7 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
       * Provide a forum (perhaps right here) for all DRep solicitations for delegation.  
 
 **Conclusion:** 
-* The process of evolution has solved many engineering problems . Perhaps we should take a look at how nature to implements democracy
-* [Follow this link](https://forum.cardano.org/t/modeling-cardano-governance-on-a-version-of-democracy-which-evolved-over-millions-of-years/117109?u=johnshearing) for a full discussion of Bee Democracy on the Cardano Forum
+* The process of evolution has solved many engineering problems . Perhaps we should take a look at how nature to implements democracy. Bees don’t use their DReps to make decisions for the group. Bees use DReps as scouts. Bees use DReps to collect information and broadcast it to the group. Then all of them decide together.
 
 
 ### #13: IGCO - initial governance coin offering
