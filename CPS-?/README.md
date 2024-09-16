@@ -142,8 +142,96 @@ Notify the current Constituional Commitee of the person in charge of the Emergen
 **Recommendation:**
 
 ### #12: Vote buying - Ada kickbacks.
+**Problem: Buying and Selling of Delegation** 
+ * With regard to [CIP-1694](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md), Treasury withdrawals come to mind but there could be a market for delegation on most any governance action. It seems that in a close election where there is a lot of ADA waiting on the outcome, a market for delegation is created where delegation becomes much more valuable as we approach the [end of an epoch](https://github.com/JaredCorduan/CIPs/blob/voltaire-v1/CIP-1694/README.md#lifecycle) when votes are tallied. Payment for delegators could be in ADA or another currency. So there may be a perverse incentive for delegators to wait till the last minutes of an epoch before delegating in order to get the best price for their delegation. Aside from corrupting the election, it could also overload the system as votes come in at the last moments before an epoch closes. 
+  * Delegation is linked to wallets in an obvious way so payment for delegation could be most easily made in ADA.  
+  * In this market for delegation:  
+    * Where it is known exactly how much delegation you still need in order to get the ADA for your project out of the treasury,  
+    * which makes possible to calculate with certainty the price for delegation which leaves you with your target profit margin intact,  
+    * and where you can broadcast an offer to purchase delegation,  
+    * and where you can see exactly which wallets are delegating to you in response to your offer...  
+    * Then you know exactly where to send the delegator's share of ADA after snatching it from the treasury.  
+    * Likely this fraud could be automated via smart contract in a trustless manner such that the price for  delegation is displayed and so that the dishonest delegators would not need to trust the dishonest DRep for payment.  
+    * This attack could also be carried out on a vote for parameter change or on any other governance action.  
 
-**Recommendation:**
+**Modeling Cardano Governance On Bee Democracy**  
+  * The notion that we are locked into any given voting system because of current blockchain structure is an illusion  
+    * Our community can build anything it wants if we believe we can  
+    * Let's build a blockchain to fit our voting needs not a voting system to fit our blockchain   
+  * Bee Democracy
+    * Over millions of years, through the process of evolution, nature has already worked out the form of democracy which produces the most truth and best results for its citizens  
+    * [This video explains Bee Democracy](https://youtu.be/NDnQ4pAjBUg?t=310)  
+    * Bee Democracy has DReps. Let's call them BReps. 
+    * These are the scouts which return to the hive with information about a particular proposal (A new location for the hive)
+    * From the video we see that BReps dance for the delegators to communicate why their proposal is the best.
+    * Unlike our DReps... 
+      * BReps (the scouts) compete for delegation with no reward except for survival of their hive which includes their own survival  
+        * If paying scouts for their work produced more truth than simply working for their own survival and prosperity then evolution would have selected for that  
+      * BReps only receive delegation for the proposal they are currently soliciting for - Then delegation ends  
+        * This is key to a functioning democracy - DReps in the bee's world have to earn their delegation for each proposal  
+        * In human democracy the DReps only their earn delegation once and then learn to exploit their power for personal gain during the rest of their careers  
+        * Bee democracy is structured like so because those structured differently were all selected out of existence  
+        * We should model our democracy after the one which nature has perfected over the course of millions of years  
+    * **Abstracting bee democracy functions and applying these to Cardano governance** 
+      * Each BRep must solicit for delegation on each and every proposal using an online document (a solicitation) which explains their position and which also locks their vote. 
+      * The mechanism is an on-chain transaction with a signed vote and the hash of an immutable webpage
+      * The BRep's vote is cast and embedded in the solicitation with their digital signature. 
+      * The BRep's vote can not be changed once the solicitation has been published so delegators know what they are getting
+      * Delegators delegate ADA to the BRep's solicitation rather than to the BRep directly  
+      * Delegators may change their delegation at any time before the final tally
+      * Delegators may not vote directly, rather Delegators may register as a BRep and then delegate ADA to their own solicitation if they wish and then vote on that. 
+      * This structure ensures that:  
+        * Delegators have lots of good information to make their decisions  
+        * Delegators are deliberately casting their delegation of ADA for a given proposal  
+        * Uninformed delegators don't delegate  
+        * Uninformed BReps don't vote
+        * Delegators know in advance, before delegation, how BReps voted and why
+        * BReps must explain their reasoning on every proposal
+        * A body of literature remains (the solicitations) so future generations will understand how we came to our decisions and what they should consider before making changes
+        * BReps can remain anonymous, building reputations only on their body of solicitations which all have the same signature.  
+      * In bee democracy there is a race to consensus which prevents a market for delegation from emerging - Bees can't sell their delegation 
+        * A race to consensus is not possible in Cardano democracy because too many votes or delegations in a short amount of time will jam the system
+        * So other methods must be employed to make delegation of ADA more costly to buy then simply buying ADA at market rate.  
+          * Block the ability to read the total amount of ADA delegated to a BRep's solicitation while voting is in progress.  
+            * This makes it impossible to calculate the ADA tally until the election is over
+            * This will help prevent a delegation market from emerging during an election by making it difficult to determine how much ADA delegation is required to pass a proposal  
+            * This may necessitate voting on a sidechain which has the required properties 
+          * Block the ability of anyone except the delegator from seeing to which solicitation an individual has delegated   
+            * This will help prevent a delegation market from emerging during an election by making it difficult to determine the how much ADA is needed to pass a proposal
+            * Prevents a delegation market from forming because it would not be easy (cost effective) for BReps to know where to send ADA in exchange for delegation after the election  
+            * Prevents automating a delegation market with smart contracts
+            * Allows proof that an election is not rigged  
+            * Protects delegator from reprisal by current a regime  
+            * This may necessitate voting on a sidechain which has the required properties 
+      * CC, BRep, and SPO votes to remain transparent by virtue of the solicitation process which forces all to explain their votes and leave a body of information so that future generations will understand why those decisions were made
+      * Code to enforce that BReps commit their vote in a signed solicitation for delegation prior to tally with no ability to change the vote which gives delegators sufficient time to verify that BReps are voting as expected and gives delegators time to read and understand the solicitations prior to delegation
+      * Code to enforce that delegation of ADA to a solicitation must come from a wallet and never from a smart contract
+        * This is to prevent trustless renting of ADA via smart contract for use as delegation in an election
+        * In other words to rent out ADA for use as delegation, the renter will be forced to give up custody
+      * Provide a forum (perhaps right here) for all BRep solicitations for delegation.  
+
+**Dealing With Low Delegator Participation Which Blocks Governance Action**  
+  * It is essential for the security of the Cardano blockchain that delegators (the regular folks) participate in elections. Otherwise whales and exchanges will be winning all the governance actions and will manipulate Cardano government for their advantage with little or no consideration for the unbanked individuals that Cardano was built to serve. It is assumed that the big investors will always delegate their ADA to any solicitation which best advances their goals. Since it can be estimated how much ADA is held by big investors, a delegation threshold parameter is coded into the system to ensure that a significant amount of ADA (well above what the big investors hold) is delegated to the solicitations. This is the only way to know for sure that the little people are delegating too. If delegation to the solicitations does not meet the threshold when votes are tallied then the proposal is dismissed and no action is taken. So a mechanism which is meant to protect small investors will have the unintended consequence of blocking all governance if small investors are not interested enough to delegate their ADA in order to settle the matter. There is a way to proceed with governance if a proposal suffers from low delegator participation
+    * Putting A Proposal On Trial
+      * If an election does not meet the threshold for delegator participation then the proposal goes to trial. 
+      * Jurors are randomly selected from the pool of BReps in an amount equal to the number of Constitutional committee members. Their identities are not required - they can remain anonymous. All that is required is that they have submitted perhaps 10 solicitations in the past. If they can provide the same signature that is on their past solicitations, that is all which is needed to establish them as community members and to judge their character and reputation.
+      * In an online meeting (audio only - no video), each juror is questioned by BReps from both sides of the proposal to determine that they are willing to examine both sides of the issue and have the time to do so.
+      * Jurors are then asked to read the solicitations. 
+      * The next day there is a group online discussion with BReps from both sides of the proposal presenting to the jurors
+      * Finally, the jurors vote on the proposal using the same signature they have been using to sign their past solicitations
+    * Advantages of the Trial Structure For Handling Low Delegator Turnout
+      * The community gets first shot at handling all governance actions
+      * **Cardano Citizens remain anonymous and yet establish their BRep identity, reputation and right to vote in trials through their work creating solicitations**.
+        * This is a big deal. This is the closest we can get to establishing a one person one vote system without the need to know the identities of our citizens.
+        * This works because BRep identities are established by the digital signatures on their solicitations which are the same signatures they use to vote in trials.
+      * **Boot Strapping Problem is solved**.
+        * All citizens have the right to delegate their ADA to a BRep's solicitation and any citizen can become a BRep and write a solicitation that receives delegation. But only BReps that have created a body of 10 or more solicitations are eligible to vote in a trial. So all governance actions are first presented as solicitations that the entire community votes on by virtue of their delegation to the solicitations. In the beginning, if delegator turn out is low then the proposal goes to trial and the Constitutional Committee will vote on the matter. But while these first 10 governance actions are being decided, BReps are establishing their anonymous identities, reputation, and right to vote in trials by writing their own solicitations. In only a short time, the community will have a very large pool of BReps that have earned the right to vote on proposals that go to trial. At this point the Constitutional Committee is no longer involved in proposal trials and decide only whether or not proposals are constitutional or not. By putting all proposals before the entire community first, we insure that many more citizens are continually writing BRep solicitations and earning their right to vote in trials.
+
+**Conclusion:** 
+* The process of evolution has solved many engineering problems . Perhaps we should take a look at how nature to implements democracy. Bees don’t use their DReps to make decisions for the group. Bees use DReps as scouts. Bees use DReps to collect information and broadcast it to the group. Then all of them decide together. The Cardano protocol was built on peer reviewed science. Our community should look at peer reviewed science on how decision making has evolved in nature and apply what we can to Cardano governance.
+
+Join the conversation about how evolution handles democracy [on the Cardano forum](https://forum.cardano.org/t/modeling-cardano-governance-on-a-version-of-democracy-which-evolved-over-millions-of-years/117109?u=johnshearing)
+
 
 ### #13: IGCO - initial governance coin offering
   * offering voters a token of unknown value by a representative to acquire delegators
